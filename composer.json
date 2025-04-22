@@ -1,0 +1,54 @@
+{
+  "name": "grizzlygarillaz/laravel-tagger",
+  "description": "Your package description",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^11.0|^12.0",
+    "spatie/laravel-package-tools": "^1.92"
+  },
+  "autoload": {
+    "psr-4": {
+      "YourVendor\\PackageName\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": []
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.2",
+    "laravel/legacy-factories": "^1.0.4",
+    "phpstan/phpstan": "^2.1",
+    "laravel/pint": "^1.22",
+    "pestphp/pest": "^3.8"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Workbench\\App\\": "workbench/app/",
+      "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+      "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@clear",
+      "@prepare"
+    ],
+    "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+    "prepare": "@php vendor/bin/testbench package:discover --ansi",
+    "build": "@php vendor/bin/testbench workbench:build --ansi",
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "@build",
+      "@php vendor/bin/testbench serve --ansi"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
