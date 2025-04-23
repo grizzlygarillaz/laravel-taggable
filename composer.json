@@ -18,6 +18,7 @@
       "providers": []
     }
   },
+  "minimum-stability": "dev",
   "require-dev": {
     "orchestra/testbench": "^10.2",
     "laravel/legacy-factories": "^1.0.4",
