@@ -19,6 +19,7 @@
     }
   },
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "require-dev": {
     "orchestra/testbench": "^10.2",
     "laravel/legacy-factories": "^1.0.4",
