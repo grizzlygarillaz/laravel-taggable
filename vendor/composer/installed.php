@@ -3,7 +3,7 @@
         'name' => 'grizzlygarillaz/laravel-tagger',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '217c5e0a3508455538c210f112fe60e1c21dd75a',
+        'reference' => 'd2e1f87f49dc19d7dda976415dfad504e7e1e189',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -160,7 +160,7 @@
         'grizzlygarillaz/laravel-tagger' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '217c5e0a3508455538c210f112fe60e1c21dd75a',
+            'reference' => 'd2e1f87f49dc19d7dda976415dfad504e7e1e189',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
