@@ -24,9 +24,9 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-      'name',
-      'email',
-      'password',
+        'name',
+        'email',
+        'password',
     ];
 
     /**
@@ -35,8 +35,8 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-      'password',
-      'remember_token',
+        'password',
+        'remember_token',
     ];
 
     public function role(): BelongsTo
@@ -57,27 +57,28 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-          'email_verified_at' => 'datetime',
-          'password' => 'hashed',
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
         ];
     }
 
     protected function taggable(): array
     {
         return [
-          'name',
-          'role' => fn () => $this->role->name,
-          'email' => 'email',
-          'age' => null,
-          'reverse_name' => fn () => strrev($this->name),
-          'pets_name' => fn () => $this->pets->pluck('name')->join(', ', ' and '),
+            'name',
+            'role' => fn() => $this->role->name,
+            'email' => 'email',
+            'age' => null,
+            'reverse_name' => fn() => strrev($this->name),
+            'pets_name' => fn() => $this->pets->pluck('name')->join(', ', ' and '),
+            'тест' => fn() => 'тест',
         ];
     }
 
     protected function optionalTags()
     {
         return [
-          'age',
+            'age',
         ];
     }
 }

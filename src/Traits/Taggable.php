@@ -17,7 +17,7 @@ trait Taggable
      */
     public static function getTags(): array
     {
-        return (new self())->collectTags();
+        return (new self)->collectTags();
     }
 
     private function collectTags(): array
@@ -32,15 +32,16 @@ trait Taggable
             foreach ($this->taggable() as $raw => $val) {
                 $name = is_numeric($raw) ? $val : $raw;
                 $tag = Str::wrap(Str::upper(Str::snake($name)), '::');
+                
                 $this->tagMappings[$tag] = is_callable($val)
-                  ? fn () => $val($this)
-                  : fn () => $this->{$val};
+                    ? fn() => $val($this)
+                    : fn() => $this->{$val};
             }
         }
 
         if ($only !== null) {
             $only = array_map(
-                static fn ($t) => Str::wrap(Str::upper(Str::snake($t)), '::'),
+                static fn($t) => Str::wrap(Str::upper(Str::snake($t)), '::'),
                 $only
             );
 
@@ -73,22 +74,22 @@ trait Taggable
     public function parse(string $text): string
     {
         return preg_replace_callback(
-            '/(::\w+::)/',
-            function (array $m) {
+            pattern: '/(::\w+::)/u',
+            callback: function (array $m) {
                 $tag = $m[1];
                 $lower = Str::lower(trim($tag, ':'));
                 $mappings = $this->collectTagMappings([$lower]);
-                if (! isset($mappings[$tag])) {
+                if (!isset($mappings[$tag])) {
                     throw new UnparsableTagFound("Failed to parse tag: {$tag}");
                 }
                 $value = $mappings[$tag]($this);
-                if (empty($value) && ! in_array($tag, $this->optionalTags(), true)) {
+                if (empty($value) && !in_array($tag, $this->optionalTags(), true)) {
                     throw new EmptyTagFound("Tag {$tag} is empty");
                 }
 
                 return $value;
             },
-            $text
+            subject: $text,
         ) ?? $text;
     }
 
@@ -106,6 +107,6 @@ trait Taggable
      */
     public function tags(?array $only = null): array
     {
-        return array_map(static fn ($cb) => $cb(), $this->collectTagMappings($only));
+        return array_map(static fn($cb) => $cb(), $this->collectTagMappings($only));
     }
 }

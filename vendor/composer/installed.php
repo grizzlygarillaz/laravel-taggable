@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'grizzlygarillaz/laravel-tagger',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '217c5e0a3508455538c210f112fe60e1c21dd75a',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -158,9 +158,9 @@
             'dev_requirement' => false,
         ),
         'grizzlygarillaz/laravel-tagger' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '217c5e0a3508455538c210f112fe60e1c21dd75a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
