@@ -1,12 +1,12 @@
 <?php
 
+use GrizzlyGarillaz\LaravelTagger\Exceptions\EmptyTagFound;
+use GrizzlyGarillaz\LaravelTagger\Exceptions\UnparsableTagFound;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Workbench\App\Models\User;
 use Workbench\Database\Factories\PetFactory;
 use Workbench\Database\Factories\RoleFactory;
 use Workbench\Database\Factories\UserFactory;
-use YourVendor\PackageName\Exceptions\EmptyTagFound;
-use YourVendor\PackageName\Exceptions\UnparsableTagFound;
 
 // In a specific test file:
 uses(RefreshDatabase::class);

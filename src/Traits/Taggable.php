@@ -1,10 +1,10 @@
 <?php
 
-namespace YourVendor\PackageName\Traits;
+namespace GrizzlyGarillaz\LaravelTagger\Traits;
 
+use GrizzlyGarillaz\LaravelTagger\Exceptions\EmptyTagFound;
+use GrizzlyGarillaz\LaravelTagger\Exceptions\UnparsableTagFound;
 use Illuminate\Support\Str;
-use YourVendor\PackageName\Exceptions\EmptyTagFound;
-use YourVendor\PackageName\Exceptions\UnparsableTagFound;
 
 /** @phpstan-ignore trait.unused */
 trait Taggable
@@ -32,7 +32,7 @@ trait Taggable
             foreach ($this->taggable() as $raw => $val) {
                 $name = is_numeric($raw) ? $val : $raw;
                 $tag = Str::wrap(Str::upper(Str::snake($name)), '::');
-                
+
                 $this->tagMappings[$tag] = is_callable($val)
                     ? fn() => $val($this)
                     : fn() => $this->{$val};

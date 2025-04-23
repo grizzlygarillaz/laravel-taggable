@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\PackageName\Exceptions;
+namespace GrizzlyGarillaz\LaravelTagger\Exceptions;
 
 use Exception;
 

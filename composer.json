@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "YourVendor\\PackageName\\": "src/"
+      "GrizzlyGarillaz\\LaravelTagger\\": "src/"
     }
   },
   "extra": {

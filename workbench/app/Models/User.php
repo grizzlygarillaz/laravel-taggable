@@ -3,13 +3,13 @@
 namespace Workbench\App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use GrizzlyGarillaz\LaravelTagger\Traits\Taggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Workbench\Workbench\Database\Factories\UserFactory;
-use YourVendor\PackageName\Traits\Taggable;
+use Workbench\Database\Factories\UserFactory;
 
 class User extends Authenticatable
 {

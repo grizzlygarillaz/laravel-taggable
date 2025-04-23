@@ -59,10 +59,6 @@ class ComposerStaticInit65245eb90f93dfb71138af5b1620287b
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
-        'Y' => 
-        array (
-            'YourVendor\\PackageName\\' => 23,
-        ),
         'W' => 
         array (
             'Workbench\\Database\\Seeders\\' => 27,
@@ -180,6 +176,7 @@ class ComposerStaticInit65245eb90f93dfb71138af5b1620287b
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GrizzlyGarillaz\\LaravelTagger\\' => 30,
             'GrahamCampbell\\ResultType\\' => 26,
         ),
         'F' => 
@@ -230,10 +227,6 @@ class ComposerStaticInit65245eb90f93dfb71138af5b1620287b
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-        ),
-        'YourVendor\\PackageName\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Workbench\\Database\\Seeders\\' => 
         array (
@@ -566,6 +559,10 @@ class ComposerStaticInit65245eb90f93dfb71138af5b1620287b
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'GrizzlyGarillaz\\LaravelTagger\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
